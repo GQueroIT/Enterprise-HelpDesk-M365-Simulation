@@ -16,3 +16,14 @@ Verified connectivity:
 - DNS resolution not yet configured (expected at this stage)
 
 This setup prepares the server for Active Directory and DNS installation.
+
+## Key Takeaways
+
+- A dual-NIC setup allows separation between external (internet) and internal (domain) traffic
+- Static IP addressing is required for domain controllers to ensure consistent network communication
+- DNS must point to the domain controller for Active Directory to function properly
+- Initial lack of DNS resolution is expected before AD DS installation
+
+## Real-World Relevance
+
+This configuration mirrors how enterprise environments isolate domain traffic from external networks while maintaining controlled internet access for updates and management.
