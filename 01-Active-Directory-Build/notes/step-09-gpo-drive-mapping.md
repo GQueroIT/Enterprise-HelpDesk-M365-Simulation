@@ -1,4 +1,4 @@
-Step 09 - GPO Drive Mapping
+## Step 09 - GPO Drive Mapping
 
 In this step, I created and applied a Group Policy Object (GPO) to automatically map the HR shared folder as a network drive for users in the HR organizational unit.
 
