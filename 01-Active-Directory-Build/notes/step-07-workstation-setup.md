@@ -1,4 +1,4 @@
-Step 07 - Workstation Setup
+## Step 07 - Workstation Setup
 
 In this step, I configured a client machine (WORKSTATION01) to communicate with the domain controller (DC01) within a controlled internal network environment using a host-only adapter in VirtualBox.
 
