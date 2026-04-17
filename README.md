@@ -28,7 +28,8 @@ This project is being developed in phases and will continue to evolve to reflect
 - PowerShell (Automation & Administration)
 - VirtualBox (Lab Environment)
 - Microsoft 365 (Planned Integration)
-- Jira Service Management (Planned)
+- ServiceNow (Planned Primary Ticketing System)
+- Jira Service Management (Active - Ticketing & Workflow Simulation)
 - CSV Logging & Documentation Systems
 
 ---
@@ -39,7 +40,7 @@ This project is being developed in phases and will continue to evolve to reflect
 Core domain infrastructure including AD DS, OU structure, users, groups, GPOs, delegation, and automation.
 
 02-Ticketing-System-Setup  
-Implementation of a Help Desk ticketing system (Jira + ServiceNow) to simulate real support workflows.
+Implementation of Help Desk ticketing systems using Jira (active) and ServiceNow (planned) to simulate real support workflows.
 
 03-Microsoft-365-Simulation  
 User management, licensing, and administration within Microsoft 365.
@@ -74,6 +75,16 @@ Reusable templates for documentation, tickets, and workflows.
 - Help Desk delegation model implemented
 - PowerShell automation for user provisioning with logging
 
+### Ticketing System Setup (In Progress)
+
+- Jira Service Management environment configured
+- Initial ticket created to simulate Help Desk workflow
+- Ticket lifecycle structure introduced:
+  - Issue creation
+  - Investigation
+  - Resolution
+- Evidence and documentation organized per step
+
 ---
 
 ## Key Skills Demonstrated
@@ -86,13 +97,15 @@ Reusable templates for documentation, tickets, and workflows.
 - User provisioning and lifecycle management
 - Delegation of control (least privilege model)
 - Troubleshooting authentication and permission issues
+- Ticket lifecycle management (Jira)
 - Documentation and operational workflow design
 
 ---
 
 ## In Progress
 
-- Help Desk ticketing system implementation (Jira)
+- ServiceNow ticketing system implementation (planned primary ITSM platform)
+- Expansion of Jira ticket workflows (active)
 - Integration of automation into ticket workflows
 - Microsoft 365 environment configuration
 - Real-world troubleshooting scenarios
