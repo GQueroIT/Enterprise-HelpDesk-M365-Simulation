@@ -56,55 +56,51 @@ The goal was to allow Help Desk to manage workstation computer objects without g
 
 ## Step 12 – Sales User Provisioning Automation
 
-In this step, I expanded the Active Directory environment by automating the provisioning of additional Sales department users with PowerShell.
+In this step, I expanded the Active Directory environment by automating the provisioning of additional Sales department users using PowerShell.
 
-The goal was to create the environment that could support future help desk tickets, permissions scenarios, onboarding workflows, and group-based administration.
+The goal was to create a scalable and realistic onboarding workflow that could support future help desk tickets, permissions scenarios, and group-based administration.
 
-### What I configured:
-
-- Created a PowerShell automation script for employee provisioning
-- Added 17 Sales users into the `Sales` OU
-- Assigned all new users to the `Sales_Team` security group
-- Applied common directory attributes such as:
-  - Given Name
-  - Surname
-  - Display Name
-  - User Principal Name
-  - Department
-  - Title
-  - Company
-  - Office
+## What I configured:
+- Created an interactive PowerShell automation script for employee provisioning
+- Implemented dynamic input prompts for:
+- First Name
+- Last Name
+- Display Name (auto-generated if not provided)
+- Username (auto-generated if not provided)
+- User Principal Name (auto-generated if not provided)
+- Department
+- Title
+- Built department-based automation logic to eliminate manual OU and group selection:
+- Sales → Sales OU + Sales_Team group
+- HR → HR OU + HR_Team group
+- IT → IT OU + IT_Admins group
+- Added validation checks for:
+- Existing users (prevents duplicates)
+- OU existence
+- Group existence
 - Configured accounts with a standard lab password and non-expiring password policy
-- Generated a CSV log to track provisioning results
+- Implemented structured CSV logging to track provisioning results including:
+- Created (successful user creation)
+- Skipped (user already exists)
+- Error (invalid input, OU/group issues)
 
-### Validation performed:
+## Validation performed:
+- Verified correct OU mapping based on department input
+- Confirmed users were created in the correct Organizational Unit
+- Validated automatic group membership assignment
+- Tested duplicate user handling (Skipped status)
+- Tested invalid input handling (Error status)
+- Reviewed CSV log output for accuracy and consistency
 
-- Verified the `Sales` OU path in Active Directory
-- Confirmed the script executed successfully after correcting the OU path handling
-- Validated that all new users appeared in the Sales OU
-- Confirmed group membership assignment to `Sales_Team`
-- Reviewed the CSV log for both the initial error state and the successful provisioning results
+## What I learned:
+Automation significantly reduces manual configuration errors and speeds up onboarding workflows.
 
-### What I configured:
-- Delegated access on the `Workstations` OU
-- Assigned permissions to allow:
-  - Creating computer objects
-  - Deleting computer objects
-  - Moving computers between OUs
-  - Managing workstation properties
+Abstracting infrastructure (OU and group mapping) allows administrators to work more efficiently without needing to remember full Distinguished Names.
 
-### What I learned:
-Moving objects in Active Directory is not a single action.
+Proper validation and logging are critical for real-world environments, ensuring accountability and simplifying troubleshooting.
 
-It requires:
-- Delete(source OU) + Create(destination OU)
-
-Because of this, permissions had to be configured correctly on both sides. Initially, I ran into multiple "Access Denied" errors when trying to move objects, even though create/delete permissions were already assigned.
-
-The issue was missing child object permissions, which prevented movement back into the OU. Once those were configured properly, object movement worked in both directions.
-
-### Key takeaway:
-Delegation in Active Directory is more granular than it first appears. Permissions are split across object types and inheritance levels, and incorrect configuration can lead to inconsistent behavior.
+Key takeaway:
+Automation is not just about speed — it is about consistency, accuracy, and scalability. This approach mirrors how enterprise environments handle user provisioning through standardized workflows.
 
 ---
 
