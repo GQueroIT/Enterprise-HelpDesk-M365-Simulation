@@ -1,69 +1,61 @@
-# Jira Ticketing System - Initial Implementation
+# Jira Setup
+
+## Overview
+
+This section documents the initial implementation of Jira Service Management within the Enterprise Help Desk & Microsoft 365 Simulation project.
+
+The goal of this phase was to establish a working Help Desk ticketing system that could be used to simulate realistic support workflows tied to the Active Directory lab environment.
 
 ## Objective
 
-This phase focuses on the initial setup and configuration of Jira Service Management to simulate a real-world Help Desk ticketing environment.
-
-The goal is to establish a functional ticketing system that supports issue tracking, workflow management, and structured troubleshooting.
-
----
+Build the first functional ticketing platform in the project and use it to begin documenting real support activity through a structured ticket lifecycle.
 
 ## What Was Implemented
 
 - Jira Service Management environment created
-- Service project configured for IT support workflows
-- Initial ticket created to simulate Help Desk operations
+- IT support-oriented project configured
+- Initial Help Desk ticket created
 - Basic ticket lifecycle introduced:
-  - Ticket creation
-  - Investigation
-  - Resolution
-- Folder structure created to document each phase of ticket handling
-
----
-
-## Ticket Lifecycle Structure
-
-The following workflow was established:
-
-1. Step 01 - Jira Setup  
-   Initial configuration and project setup
-
-2. Step 02 - Issue Simulation  
-   Creation of a realistic Help Desk issue
-
-3. Step 03 - Investigation  
-   Troubleshooting steps and root cause analysis
-
-4. Step 04 - Resolution  
-   Fix implementation and ticket closure
-
----
+  - setup
+  - issue simulation
+  - investigation
+  - resolution
+- Evidence and notes organized by workflow stage
 
 ## Folder Structure
 
-jira-setup/  
-- config/ → Jira configuration details  
-- evidence/ → Screenshots of setup and ticket creation  
-- notes/ → Observations and workflow documentation  
+- `config/`  
+  Jira configuration details and setup documentation
 
----
+- `evidence/`  
+  Screenshots grouped by ticket lifecycle stage
 
-## Key Concepts Introduced
+- `notes/`  
+  Setup notes and implementation observations
 
-- Ticket lifecycle management
-- Issue tracking and documentation
-- Structured troubleshooting workflows
-- Separation of investigation and resolution phases
-- Documentation of support processes
+## Workflow Introduced
 
----
+The first Jira-based support workflow in this project follows this structure:
+
+1. Step 01 - Jira setup
+2. Step 02 - Issue simulation
+3. Step 03 - Investigation
+4. Step 04 - Resolution
+
+This provides the foundation for documenting realistic Help Desk activity in a structured way.
+
+## Why This Matters
+
+Jira introduced a true support workflow layer into the project.
+
+Instead of only building infrastructure, this phase began simulating how a Help Desk technician would:
+
+- receive an issue
+- document the problem
+- investigate the cause
+- apply a fix
+- record the outcome
 
 ## Outcome
 
-A functional Jira-based Help Desk system has been established to simulate real IT support workflows.
-
-This provides the foundation for:
-- Advanced ticket scenarios
-- Integration with Active Directory automation
-- Escalation and SLA tracking
-- Knowledge base development
+A functional Jira-based Help Desk environment is now in place and ready to support more advanced ticket scenarios tied to Active Directory, permissions, user administration, and future Microsoft 365 issues.
