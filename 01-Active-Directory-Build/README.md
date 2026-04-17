@@ -19,29 +19,47 @@ This section documents the full build of an on-premises Active Directory environ
 ### Step 01 – Network Setup
 Configured static IP addressing and verified connectivity between systems.
 
+---
+
 ### Step 02 – Server Identity
 Renamed server and prepared it for domain controller promotion.
+
+---
 
 ### Step 03 – Active Directory Installation
 Installed AD DS and promoted the server to a domain controller.
 
+---
+
 ### Step 04 – Domain Controller Configuration
 Configured the new domain `corp.smartech.com` and validated services.
+
+---
 
 ### Step 05 – Users and OUs
 Created organizational units and structured users based on departments.
 
+---
+
 ### Step 06 – Groups and Permissions
 Created security groups and began implementing role-based access control.
+
+---
 
 ### Step 07 – Workstation Setup
 Configured client machine and prepared it for domain integration.
 
+---
+
 ### Step 08 – Domain Join
 Joined the workstation to the domain and verified connectivity.
 
+---
+
 ### Step 09 – GPO Drive Mapping
 Configured Group Policy to map network drives automatically.
+
+---
 
 ### Step 10 – User Login and File Shares
 Tested user logins and validated access to shared resources.
@@ -53,6 +71,8 @@ Tested user logins and validated access to shared resources.
 In this step, I implemented delegation of control for the Help Desk role using the `IT_Admins` group.
 
 The goal was to allow Help Desk to manage workstation computer objects without giving full Domain Admin privileges.
+
+---
 
 ## Step 12 – Sales User Provisioning Automation
 
@@ -91,6 +111,8 @@ The goal was to create a scalable and realistic onboarding workflow that could s
 - Tested duplicate user handling (Skipped status)
 - Tested invalid input handling (Error status)
 - Reviewed CSV log output for accuracy and consistency
+
+---
 
 ## What I learned:
 Automation significantly reduces manual configuration errors and speeds up onboarding workflows.
